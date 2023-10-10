@@ -1,6 +1,6 @@
 /*
  * file name: 4-puts.c
- * made by Chloe.c 
+ * made by Chloe.c
  */
 #include <stdio.h>
 /**
