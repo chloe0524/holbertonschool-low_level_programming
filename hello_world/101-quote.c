@@ -1,3 +1,7 @@
+/*
+ * file name: 101-quote.c
+ * made by Chloe.c
+ */
 #include <stdio.h>
 #include <unistd.h>
 /**
