@@ -1,21 +1,10 @@
-/*
- * file name: 5-printf.c
- * made by Chloe.c
- */
-
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - Entry point
- *
- * Description: 'printf'
- *
- * Return: Always 0 (Success)
+ * Return: 1 if success.
  */
-
 int main(void)
 {
-        fwrite("with proper grammar, but the outcome is a piece of art,- Dora Korpar, 2015-10-19\n");
-
-        return (1);
+	write(2, "and that piece of art is useful - Dora Korpar, 2015-10-19\n", 58);
+	return (1);
 }
