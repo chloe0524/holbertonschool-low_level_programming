@@ -1,11 +1,15 @@
 /*
- * file name: 101-quote.c
- * made by Chloe.c
+ * File: 101-quote.c
+ * by Chloe.c
  */
-#include <stdio.h>
+
 #include <unistd.h>
+
 /**
- * Return: 1 if success.
+ * main - Prints "and that piece of art is useful" - Dora Korpar, 2015-10-19",
+ *                followed by a new line, to the standard error.
+ *
+ * Return: Always 1.
  */
 int main(void)
 {
