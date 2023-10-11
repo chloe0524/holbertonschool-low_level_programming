@@ -1,5 +1,5 @@
 /*
- * file name: 4-puts.c
+ * file name: 5-printf.c
  * made by Chloe.c
  */
 
@@ -8,14 +8,14 @@
 /**
  * main - Entry point
  *
- * Description: 'print sentence'
+ * Description: 'printf'
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-        puts("and that piece of art is useful"\- Dora Korpar, 2015-10-19");
+        fwrite("with proper grammar, but the outcome is a piece of art,- Dora Korpar, 2015-10-19\n");
 
         return (1);
 }
