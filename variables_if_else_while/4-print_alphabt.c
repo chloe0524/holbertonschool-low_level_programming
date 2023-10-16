@@ -6,19 +6,18 @@
  */
 int main(void)
 {
-    int i;
-    char letter;
+int i;
+char letter;
 
-    for (i = 97; i <= 122; i++)
-    {
-        letter = i;
-        if (letter != 'q' && letter != 'e')
-        {
-            putchar(letter);
-        }
-    }
-
-    putchar('\n');
-    return (0);
+for (i = 97; i <= 122; i++)
+{
+letter = i;
+if (letter != 'q' && letter != 'e')
+{
+putchar(letter);
+}
+}
+putchar('\n');
+return (0);
 
 }
