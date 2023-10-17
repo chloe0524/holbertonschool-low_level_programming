@@ -3,22 +3,13 @@
 /**
  * _abs - computes the absolute value of an integer
  *
- * @c: the character to check
+ * @n: the character to check
  *
- * Return: 1 if c lowercase, return 0 otherwise
+ * Return: n or -n
  */
-
-int _abs(int c)
+int _abs(int n)
 {
-	if (c < 0)
-	{
-		_putchar('-');
-		_putchar('0' - c);
-	}
-	else
-	{
-		_putchar('0' + c);
-	}
-	return (c);
+	if (n >= 0)
+		return (n);
+	return (-n);
 }
-
