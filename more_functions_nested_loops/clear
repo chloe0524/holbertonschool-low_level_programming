@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * print_line - print straight lines _
- * @n : integer
- * Return: nothing
+ * print_line - print straight line
+ * @n : integer for line
+ * Return: 0
  */
+
 void print_line(int n)
 {
 	int i;
@@ -14,10 +15,10 @@ void print_line(int n)
 		_putchar('\n');
 		return;
 	}
-
-	for (i = 1 ; i <= n ; i++)
+	for (i = 0; i < n; i++)
 	{
 		_putchar('_');
 	}
 	_putchar('\n');
 }
+
