@@ -5,14 +5,20 @@
  * @n : integer for line
  * Return: 0
  */
+
 void print_line(int n)
 {
-	if (n <= 0)
-	n = 1;
+	int i;
 
-	while (n-- > 1)
+	if (n <= 0)
 	{
-	_putchar('_');
+		_putchar('\n');
+		return;
 	}
-    _putchar('\n');
+	for (i = 0; i < n; i++)
+	{
+		_putchar('_');
+	}
+	_putchar('\n');
 }
+
