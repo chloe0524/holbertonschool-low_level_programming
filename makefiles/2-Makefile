@@ -4,5 +4,5 @@ OBJ = main.o school.o
 NAME = school
 
 all: $(SRC) $(OBJ) 
-	gcc -c -o main.o main.c
-	gcc -c -o school.o school.c
+	cc -c -o main.o main.c
+	cc -c -o school.o school.c
