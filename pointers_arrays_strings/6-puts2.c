@@ -1,17 +1,20 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
+
 /**
- * rev_string - reverse a string
- * @s: input string
- * Return: void
+ * puts2 - Prints every other char of string, starting with first char
+ * @str: Input string.
  */
 
 void puts2(char *str)
 {
-	char i;
+	int i;
 
-	for(i = 0; i < strlen (str); i+=2)
+	for (i = 0; str[i] != '\0'; i += 2)
 	{
-		puts2(i += str[i]);
+		_putchar(str[i]);
 	}
+		_putchar('\n');
 }
+
