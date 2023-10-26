@@ -12,7 +12,7 @@ int _atoi(char *nombre)
 {
 	int i;
 	int negatif = 1;
-	int entier = 0;
+	unsigned int entier = 0;
 	int traitementfait = 0;
 
 	for (i = 0; nombre[i] != 0; i++)
