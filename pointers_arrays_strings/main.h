@@ -38,3 +38,4 @@ char *cap_string(char *string);
 
 char *leet(char *);
 
+char *_memcpy(char *dest, char *src, unsigned int n);
