@@ -36,3 +36,5 @@ char *string_toupper(char *a);
 
 char *cap_string(char *string);
 
+char *leet(char *);
+
