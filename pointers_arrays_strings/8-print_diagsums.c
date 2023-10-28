@@ -15,7 +15,7 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < (size * size); i += size + 1)
 		cumul = cumul + a[i];
-	printf("%d\n", cumul);
+	printf("%d, ", cumul);
 
 	cumul = 0;
 	for (i = size ; i < (size * size); i += size - 1)
