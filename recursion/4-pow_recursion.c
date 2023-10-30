@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _pow_recursion - calculate the power of a number recursively
+ * _pow_recursion - calculate power of number recursively
  * @x: base number
  * @y: exponent
  *
@@ -10,12 +10,13 @@
 
 int _pow_recursion(int x, int y)
 {
-	int r = 1;
-	int i;
-
-	for (i = 0; i < y; i++)
+	if (y < 0)
 	{
-		r = r * x;
+		return (-1);
 	}
-	return (r);
+	if (y == 0)
+		return (1);
+	else if (y == 1)
+		return (x);
+	return (x * _pow_recursion(x, (y - 1)));
 }
