@@ -1,6 +1,8 @@
 #include "main.h"
 #include <math.h>
 
+int is_prime(int n, int r);
+
 /**
  * prime_number - Calc prime number
  * @n: Number to calculate
