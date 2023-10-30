@@ -30,8 +30,5 @@ int prime_number(int n, int r)
 
 int is_prime_number(int n)
 {
-
-	if (n < 0)
-		return (1);
 	return (prime_number(n, 2));
 }
