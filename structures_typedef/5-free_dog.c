@@ -1,23 +1,19 @@
-#include "dog.h"
 #include <stdlib.h>
-
+#include "dog.h"
 /**
- * free_dog - free the dogs
- * @d:number of dogs
+ * free_dog - free  dog
  *
+ * @d: dog
+ *
+ * Return: void
  */
-
 void free_dog(dog_t *d)
 {
-	int i;
-	int num = 0;
-
-	for (i = 0; i < num; i++)
-	{
-		free(d[i].name);
-		free(d[i].owner);
-	}
-
+	if (d == 0)
+		return;
+	if (d->name)
+		free(d->name);
+	if (d->owner)
+		free(d->owner);
 	free(d);
 }
-
