@@ -3,8 +3,7 @@
 
 /**
  * free_dog - free the dogs
- * @d number of dogs
- *
+ * @d:number of dogs
  *
  */
 
