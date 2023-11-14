@@ -1,0 +1,39 @@
+#include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    int n1, n2;
+	int rslt;
+
+	if (argc != 4)
+    {
+        printf("Error\n");
+        return (98);
+    }
+
+    int n1 = atoi(argv[1]);
+    int n2 = atoi(argv[3]);
+
+    int rslt;
+    char *operator = argv[2];
+
+    if ((operator[0] == '/' || operator[0] == '%') && n2 == 0)
+    {
+        printf("Error\n");
+        return (100);
+    }
+
+    rslt = get_result(n1, operator, n2);
+
+    if (rslt == -1)
+    {
+        printf("Error\n");
+        return (99);
+    }
+
+    printf("%d\n", result);
+
+    return (0);
+m
