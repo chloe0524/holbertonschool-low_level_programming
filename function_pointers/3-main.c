@@ -25,26 +25,16 @@ int main(int arc, char *arv[])
 	b = atoi(arv[3]);
 	f = get_op_func(arv[2]);
 
-	if (f == NULL || arv[2][1] != '\0')
+	if (f == NULL)
 	{
 		printf("Error\n");
 		return (99);
 	}
-	if (*arv[2] == '/')
+	if ((*arv[2] == '/' || *arv[2] == '%') && b == 0)
 	{
-		if (b == 0)
-		{
-			printf("Error\n");
-			return (100);
-		}
-	}
-	else if (*arv[2] == '%')
-	{
-		if (b == 0)
-		{
-			printf("Error\n");
-			return (100);
-		}
+		printf("Error\n");
+		return (100);
+
 	}
 	rslt = f(a, b);
 
