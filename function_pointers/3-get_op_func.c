@@ -3,7 +3,7 @@
 
 /**
  * get_op_func - choose function to perform op
- * 
+ *
  * @s: operator as arg
  * Return: pointer function
  */
