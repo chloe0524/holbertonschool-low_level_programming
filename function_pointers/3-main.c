@@ -10,27 +10,27 @@
  *
  * Return: 0 on success.
  */
-int main(int arc, char *arv[])
+int main(int argc, char *argv[])
 {
 	int a, b;
 	int rslt;
 	int (*f)(int, int);
 
-	if (arc != 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		return (98);
 	}
-	a = atoi(arv[1]);
-	b = atoi(arv[3]);
-	f = get_op_func(arv[2]);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	f = get_op_func(argv[2]);
 
 	if (f == NULL)
 	{
 		printf("Error\n");
 		return (99);
 	}
-	if ((*arv[2] == '/' || *arv[2] == '%') && b == 0)
+	if ((*argv[2] == '/' || *argv[2] == '%') && b == 0)
 	{
 		printf("Error\n");
 		return (100);
