@@ -10,7 +10,6 @@
  *
  * Return: 0 on success.
  */
-
 int main(int arc, char *arv[])
 {
 	int a, b;
@@ -22,7 +21,6 @@ int main(int arc, char *arv[])
 		printf("Error\n");
 		return (98);
 	}
-
 	a = atoi(arv[1]);
 	b = atoi(arv[3]);
 	f = get_op_func(arv[2]);
@@ -32,7 +30,6 @@ int main(int arc, char *arv[])
 		printf("Error\n");
 		return (99);
 	}
-
 	if (*arv[2] == '/')
 	{
 		if (b == 0)
@@ -49,10 +46,8 @@ int main(int arc, char *arv[])
 			return (100);
 		}
 	}
-
 	rslt = f(a, b);
 
 	printf("%d\n", rslt);
 	return (0);
 }
-
