@@ -5,8 +5,8 @@
 /**
  * main - calculates two numbers given a string
  *
- * @arc: number of arguments
- * @arv: array of argument strings
+ * @argc: number of arguments
+ * @argv: array of argument strings
  *
  * Return: 0 on success.
  */
