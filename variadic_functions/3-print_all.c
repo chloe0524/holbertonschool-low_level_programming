@@ -86,7 +86,7 @@ void print_all(const char * const format, ...)
 	{
 		position = 0;
 		while (display[position].format_type != format[i] &&
-			display[position].format_type != '\0')
+				display[position].format_type != '\0')
 			position++;
 
 		if (display[position].format_type != '\0')
