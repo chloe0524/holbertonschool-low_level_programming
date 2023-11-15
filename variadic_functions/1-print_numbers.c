@@ -27,8 +27,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", va_arg(printslist, int));
 		if (i < n - 1 && separator != NULL)
 			printf("%s", separator);
+
+		va_end(printslist);
 	}
 
 	printf("\n");
-	va_end(printslist);
 }
