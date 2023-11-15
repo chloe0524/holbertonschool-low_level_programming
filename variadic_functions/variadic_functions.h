@@ -7,4 +7,10 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+typedef struct
+{
+    char format_type;
+    void (*fdisplay)(va_list);
+} tdisplay;
+
 #endif
