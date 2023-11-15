@@ -1,5 +1,5 @@
-#ifdef VAR_H
-#define VAR_H
+#ifndef VAR_FUNCTIONS_H
+#define VAR_FUNCTIONS_H
 #include <stdarg.h>
 
 int sum_them_all(const unsigned int n, ...);
