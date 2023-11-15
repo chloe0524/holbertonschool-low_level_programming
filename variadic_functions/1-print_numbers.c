@@ -3,10 +3,11 @@
 #include <stdio.h>
 
 /**
- * print_string - print string
+ * print_numbers - print numbers with separator
  *
- * @n: number of args
- * Return: prints var
+ * @separator: delimiter between numbers
+ * @n: number of arguments
+ * Return: prints varargs
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -14,19 +15,20 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list printslist;
 
+	va_start(printslist, n);
+
 	if (separator == NULL)
 	{
 		return;
 	}
 
-	va_start(printslist, n);
-
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%d, ", va_arg(printslist, int));
-	}
-	if (i <= 4)
 		printf("%d", va_arg(printslist, int));
+		if (i < n - 1 && separator != NULL)
+			printf("%s", separator);
+	}
 
+	printf("\n");
 	va_end(printslist);
 }
