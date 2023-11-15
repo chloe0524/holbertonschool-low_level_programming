@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-/*
+/**
+ * sum_them_all - Calculates sum of variable args
  *
- *
- *
- *
+ * @n: number of args
+ * Return: sum of variable args
  */
 
 int sum_them_all(const unsigned int n, ...)
@@ -20,6 +20,6 @@ int sum_them_all(const unsigned int n, ...)
 		sum += va_arg(mathlist, int);
 
 	va_end(mathlist);
-	return sum;
+	return (sum);
 }
 
