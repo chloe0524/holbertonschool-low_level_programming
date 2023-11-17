@@ -1,5 +1,6 @@
 ## Tasks
-![this-is-fine-fire](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/8bac2edc-3ba5-4d33-aef8-ecd561b8877e)
+
+            ![giphy](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/44ca4193-b221-4cba-94bd-958fac8541bb)
 
 ### 0. Beauty is variable, ugliness is constant
 
