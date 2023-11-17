@@ -1,7 +1,6 @@
 ## Tasks
 
-![text (1)](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/0bb189ee-f0e9-4bf1-9cf5-4c49739abaf9)
-
+![text (2)](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/472d8da1-676b-464e-aca7-354067f1f9eb)
 
 ### 0. It ain't what they call you, it's what you answer to
 
