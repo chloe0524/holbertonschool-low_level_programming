@@ -28,7 +28,6 @@ void display_int(va_list va)
 {
 	printf("%d", va_arg(va, int));
 }
-
 /**
  * display_float - Display a floating-point number.
  * @va: va_list containing the floating-point number to be displayed.
@@ -97,7 +96,7 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-
 	va_end(liste_parametre);
 	putchar('\n');
 }
+
