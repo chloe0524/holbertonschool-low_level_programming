@@ -1,4 +1,4 @@
-## Tasks
+# Tasks
 
 ### <span style="color: green;">0. Beauty is variable, ugliness is constant</span>
 
@@ -20,7 +20,7 @@ Prototype: `void print_numbers(const char *separator, const unsigned int n, ...)
 
 where `separator` is the string to be printed between numbers and `n` is the number of integers passed to the function. You are allowed to use `printf`. If `separator` is NULL, don’t print it. Print a new line at the end of your function.
 
-### <span style="color: green;">2. One woman's constant is another woman's variable</span>
+@@#2.One woman's constant is another woman's variable</span>
 
 **mandatory**
 
@@ -28,5 +28,4 @@ Write a function that prints strings, followed by a new line.
 
 Prototype: `void print_strings(const char *separator, const unsigned int n, ...);`
 
-where `separator` is the string to be printed between the strings and `n` is the number of strings passed to the function. You are allowed to use `printf`. If `separator` is NULL, don’t print it. If one of the strings is NULL, print `(nil)` instead. Print a new line at the end of your functi
-
+where `separator` is the string to be printed between the strings and `n` is the number of strings passed to the function. You are allowed to use `printf`. If `separator` is NULL, don’t print it. If one of the strings is NULL, print `(nil)` instead. Print a new line at the end of your function.
