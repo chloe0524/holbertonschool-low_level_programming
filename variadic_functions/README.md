@@ -1,7 +1,5 @@
 ## Tasks
 
-<div class="tenor-gif-embed" data-postid="24177057" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/this-is-fine-gif-24177057">This Fine GIF</a>from <a href="https://tenor.com/search/this-gifs">This GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
 ### 0. Beauty is variable, ugliness is constant
 
 **mandatory**
