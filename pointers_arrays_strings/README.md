@@ -1,4 +1,5 @@
 # Tasks
+![this-is-fine-fire](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/db532f4c-55f6-4ab5-ad22-e7e33c5c42fc)
 
 ## Task 0: 98 Battery st.
 **Mandatory**
