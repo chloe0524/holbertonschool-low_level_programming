@@ -1,5 +1,7 @@
 # Tasks
 
+![NestedLoopsDiagram300x500](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/44629ce6-70de-4a49-89d5-dd5e37c35d78)
+
 1. **[_putchar](#_putchar)**
 2. **[Alphabet](#alphabet)**
 3. **[10 x Alphabet](#10-x-alphabet)**
