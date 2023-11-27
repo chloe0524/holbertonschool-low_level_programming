@@ -1,4 +1,6 @@
-# List Functions
+# :spiral_notepad: List Functions
+
+![owgc2k3v0yz91](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/030a6bbc-4566-436e-ba27-0b163203a65d)
 
 - [0. Print list](#0-print-list-mandatory)
 - [1. List length](#1-list-length-mandatory)
