@@ -7,6 +7,7 @@
  *
  * Return: address of new element or NULL
  */
+
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *other_node;
@@ -30,16 +31,16 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (*head != NULL)
 	{
-		*head = other_node;
-	}
-	else
-	{
 		end_node = *head;
 		while (end_node->next)
 		{
 			end_node = end_node->next;
 		}
 		end_node->next = other_node;
+	}
+	else
+	{
+		*head = other_node;
 	}
 
 	return other_node;
