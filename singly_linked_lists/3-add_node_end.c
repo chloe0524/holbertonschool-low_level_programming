@@ -16,14 +16,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	while (!(other_node = malloc(sizeof(list_t))) || !head || !str)
 	{
 		free(other_node);
-		return NULL;
+		return (NULL);
 	}
 
 	other_node->str = strdup(str);
 	if (!other_node->str)
 	{
 		free(other_node);
-		return NULL;
+		return (NULL);
 	}
 
 	other_node->len = strlen(str);
@@ -43,5 +43,5 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = other_node;
 	}
 
-	return other_node;
+	return (other_node);
 }
