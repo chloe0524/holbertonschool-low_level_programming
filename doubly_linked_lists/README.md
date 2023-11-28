@@ -1,4 +1,5 @@
 # C - Doubly linked lists
+![pain-all-i-f9fbbce4bd](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/978fa947-e42f-4f75-96c8-c1303d726c29)
 
 - [0. Print list](#0-print-list-mandatory)
 - [1. List length](#1-list-length-mandatory)
