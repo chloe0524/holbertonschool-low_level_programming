@@ -1,6 +1,6 @@
 ![ici_pexels-tibe-de-kort-9951077](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/abf77bf5-5e14-45f1-8c5b-22cd5b55a74a)
 
-# :chess_pawn: C - Bit manipulation
+# :zero: C - Bit manipulation :one:
 
 - [Task 0.0](#task-00)
 - [Task 1.1](#task-11)
