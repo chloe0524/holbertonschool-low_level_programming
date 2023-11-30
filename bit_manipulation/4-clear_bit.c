@@ -1,14 +1,13 @@
 #include "main.h"
 
 /**
- * clear_bit - sets the value of a bit at a given index to 0
+ * clear_bit - Clears the value of a bit at a given index to 0.
  *
- * @n: pointer to the number to modify
- * @index: index of the bit to set
+ * @n: Pointer to the number to modify.
+ * @index: Index of the bit to clear.
  *
- * Return: 0 if successful, or -1 on error
+ * Return: 1 if successful, or -1 on error.
  */
-
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int mask;
@@ -19,6 +18,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	mask = 1UL << index;
 	*n = *n & (~mask);
 
-	return (0);
+	return (1);
 }
 
