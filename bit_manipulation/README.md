@@ -1,13 +1,13 @@
 # Tasks
 
-- [Task 0](#task-0)
-- [Task 1](#task-1)
-- [Task 2](#task-2)
-- [Task 3](#task-3)
-- [Task 4](#task-4)
-- [Task 5](#task-5)
+- [Task 0.0](#task-00)
+- [Task 1.1](#task-11)
+- [Task 2.10](#task-210)
+- [Task 3.11](#task-311)
+- [Task 4.100](#task-4100)
+- [Task 5.101](#task-5101)
 
-## Task 0
+## Task 0.0
 
 **Mandatory**
 
@@ -18,7 +18,7 @@ Write a function that converts a binary number to an unsigned int.
 - **Return:** the converted number, or 0 if there is one or more chars in the string `b` that is not 0 or 1.
 - `b` is NULL.
 
-## Task 1
+## Task 1.1
 
 **Mandatory**
 
@@ -30,7 +30,7 @@ Write a function that prints the binary representation of a number.
 - You are not allowed to use malloc.
 - You are not allowed to use the % or / operators.
 
-## Task 2
+## Task 2.10
 
 **Mandatory**
 
@@ -40,7 +40,7 @@ Write a function that returns the value of a bit at a given index.
 - `index` is the index, starting from 0, of the bit you want to get.
 - **Returns:** the value of the bit at index `index` or -1 if an error occurred.
 
-## Task 3
+## Task 3.11
 
 **Mandatory**
 
@@ -50,7 +50,7 @@ Write a function that sets the value of a bit to 1 at a given index.
 - `index` is the index, starting from 0, of the bit you want to set.
 - **Returns:** 1 if it worked, or -1 if an error occurred.
 
-## Task 4
+## Task 4.100
 
 **Mandatory**
 
@@ -60,7 +60,7 @@ Write a function that sets the value of a bit to 0 at a given index.
 - `index` is the index, starting from 0, of the bit you want to set.
 - **Returns:** 1 if it worked, or -1 if an error occurred.
 
-## Task 5
+## Task 5.101
 
 **Mandatory**
 
