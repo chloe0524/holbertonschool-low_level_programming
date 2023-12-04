@@ -9,9 +9,9 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t total_written = 0;
+	ssize_t bytes_written;
 	int fd = open(filename, O_RDONLY);
-	ssize_t bytes_read = 0;
-	size_t actual_num = 0;
 	char buffer[BUFSIZ];
 
 	if (filename == NULL)
@@ -20,16 +20,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	while (actual_num < (size_t)letters)
+	while (letters > 0 && (bytes_written = write(STDOUT_FILENO, buffer,
+					read(fd, buffer, BUFSIZ))) > 0)
 	{
-		bytes_read = read(fd, buffer, sizeof(buffer));
-		if (bytes_read <= 0)
-			break;
-
-		write(STDOUT_FILENO, buffer, bytes_read);
-		actual_num += bytes_read;
+		total_written += bytes_written;
+		letters -= bytes_written;
 	}
 
-	return (actual_num);
+	close(fd);
+	return (total_written);
 }
-
