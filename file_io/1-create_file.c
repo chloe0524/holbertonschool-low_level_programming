@@ -13,12 +13,12 @@ int create_file(const char *filename, char *text_content)
 	int file, write_status;
 
 	if (filename == NULL)
-		return -1;
+		return (-1);
 
-	file = open(filename, O_WRONLY | O_CREAT, 0664);
+	file = open(filename, O_WRONLY | O_CREAT, 0600);
 
 	if (file == -1)
-		return -1;
+		return (-1);
 
 	if (text_content != NULL)
 	{
@@ -27,10 +27,10 @@ int create_file(const char *filename, char *text_content)
 		if (write_status == -1)
 		{
 			close(file);
-			return -1;
+			return (-1);
 		}
 	}
 
 	close(file);
-	return 1;
+	return (1);
 }
