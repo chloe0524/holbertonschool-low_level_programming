@@ -1,5 +1,6 @@
-#include "main.h"
-
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
 
 /**
  * read_textfile - prints text from a file
@@ -9,36 +10,38 @@
  *
  * Return: actual number of letters read, 0 if end of file
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t total_written = 0;
-	ssize_t bytes_written;
-	int fd = open(filename, O_RDONLY);
+	int file;
+	ssize_t actual_number, bytes_read;
+	char *buf;
 
-	char *buf = malloc(sizeof(char) * BUFSIZ);
+	if (filename == NULL || letters == 0)
+		return (0);
+	buf = malloc(sizeof(char) * letters);
+	if (buf == NULL)
+		return (0);
 
-	if (filename == NULL || buf == NULL)
+	file = open(filename, O_RDONLY);
+	if (file == -1)
 	{
 		free(buf);
 		return (0);
 	}
-
-	if (fd == -1)
+	actual_number = read(file, buf, letters);
+	if (actual_number == -1)
 	{
 		free(buf);
+		close(file);
 		return (0);
 	}
 
-	while (letters > 0 && (bytes_written = write(STDOUT_FILENO, buf,
-					read(fd, buf, BUFSIZ))) > 0)
-	{
-		total_written += bytes_written;
-		letters -= bytes_written;
-	}
+	bytes_read = write(STDOUT_FILENO, buf, actual_number);
 
 	free(buf);
-	close(fd);
-	return (total_written);
+	close(file);
+	if (bytes_read != actual_number)
+		return (0);
+	return (actual_number);
 }
 
