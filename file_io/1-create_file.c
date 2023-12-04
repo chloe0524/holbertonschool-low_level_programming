@@ -6,31 +6,36 @@
  * @text_content: the text to be written to the file
  *
  * Return: the number of bytes written to the file, or -1 on error
+ *
  */
-
 int create_file(const char *filename, char *text_content)
 {
-	int file, write_status;
+	int fd;
+	ssize_t text_size = 0;
+	ssize_t write_status;
 
 	if (filename == NULL)
 		return (-1);
 
-	file = open(filename, O_WRONLY | O_CREAT, 0600);
-
-	if (file == -1)
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	if (fd == -1)
 		return (-1);
 
 	if (text_content != NULL)
 	{
-		write_status = write(file, text_content, strlen(text_content));
+		while (text_content[text_size] != '\0')
+			text_size++;
 
-		if (write_status == -1)
+		write_status = write(fd, text_content, text_size);
+
+		if (write_status == -1 || write_status != text_size)
 		{
-			close(file);
+			close(fd);
 			return (-1);
 		}
 	}
 
-	close(file);
+	close(fd);
 	return (1);
 }
+
