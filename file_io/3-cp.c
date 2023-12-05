@@ -1,118 +1,127 @@
 #include "main.h"
 
 /**
- * main - program that copies content of one file to another
- * @argc: Number of arguments
- * @argv: Array of arguments
+ * close_andprint - closes a file descriptor and prints
+ * an error message if it fails
  *
- * Return: 0 on success, or error codes
+ * @fd: file descriptor to close
+ *
+ * Return: 0 on success, 100 on failure
  */
-int main(int argc, char *argv[])
+int close_andprint(int fd)
 {
-	int fd_from, fd_to;
+	int oops;
 
-	if (argc != 3)
+	oops = close(fd);
+	if (oops == -1)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
-		return (97);
-	}
-
-	if (file_init(argv[1], argv[2], &fd_from, &fd_to) != 0)
-	{
-		return (98);
-	}
-
-	if (error_copy(fd_from, fd_to) != 0)
-	{
-		return (99);
-	}
-
-	if (error_close(fd_from, fd_to) != 0)
-	{
+		dprintf(STDERR_FILENO, "Oops: Can't close fd %d\n", fd);
 		return (100);
 	}
-
 	return (0);
 }
 
 /**
- * file_init - initialize files for copying
- * @file_back: source file name
- * @file_go: destination file name.
- * @fd_back: pointer to source file descriptor
- * @fd_go: pointer to destination file descriptor
+ * writing_oops - error handler for a write error
  *
- * Return: 0 on success, or 1
+ * @fd1: first descriptor to close
+ * @fd_go: second descriptor to close
+ * @filename: filename prompting the error
+ *
+ * Return: 99
  */
-int file_init(char *file_back, char *file_go, int *fd_back, int *fd_go)
+int writing_oops(int fd1, int fd_go, char *filename)
 {
-	*fd_back = open(file_back, O_RDONLY);
-	*fd_go = open(file_go, O_WRONLY | O_TRUNC);
-
-	if (*fd_back == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", file_back);
-		return (1);
-	}
-
-	if (*fd_go == -1)
-	{
-		*fd_go = open(file_go, O_WRONLY | O_TRUNC | O_CREAT, 0644);
-		if (*fd_go == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_go);
-			return (1);
-		}
-	}
-
-	return (0);
+	dprintf(STDERR_FILENO, "Oops: Can't write to %s\n", filename);
+	close_andprint(fd1);
+	close_andprint(fd_go);
+	return (99);
 }
+
 /**
- * error_copy - copy content from one file desc to another
- * @fd_from: source file descriptor
- * @fd_to: destination file descriptor
+ * reading_oops - error handler for a read error
  *
- * Return: 0 on success, 98 or 99
+ * @fd1: first descriptor to close
+ * @fd_go: second descriptor to close
+ * @filename: filename prompting the error
+ *
+ * Return: 98
  */
-int error_copy(int fd_from, int fd_to)
+int reading_oops(int fd1, int fd_go, char *filename)
 {
-	char buffer[1024];
-	ssize_t ctr_read, ctr_write;
-
-	while ((ctr_read = read(fd_from, buffer, sizeof(buffer))) > 0)
-	{
-		if (ctr_read == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file\n");
-			return (98);
-		}
-
-		ctr_write = write(fd_to, buffer, ctr_read);
-		if (ctr_write == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file\n");
-			return (99);
-		}
-	}
-
-	return (0);
+	dprintf(STDERR_FILENO, "Oops: Can't read from file %s\n", filename);
+	close_andprint(fd1);
+	close_andprint(fd_go);
+	return (98);
 }
 
 /**
  * error_close - close file descriptors
- * @fd_from: source file descriptor
- * @fd_to: destination file descriptor
+ *
+ * @fd_back: source file descriptor
+ * @fd_go: destination file descriptor
  *
  * Return: 0 on success, or 100
  */
-int error_close(int fd_from, int fd_to)
+int error_close(int fd_back, int fd_go)
 {
-	if ((close(fd_from) == -1) || (close(fd_to) == -1))
+	if ((close_andprint(fd_back) == 100) || (close_andprint(fd_go) == 100))
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close file descriptors\n");
+		dprintf(STDERR_FILENO, "Oops: Can't close file descriptors\n");
 		return (100);
 	}
 
 	return (0);
 }
 
+
+/**
+ * main - copy one file to another, new file with perms 664
+ * usage - cp file_from file_to
+ *
+ * @ac: number of arg
+ * @av: list of args
+ *
+ * Return: 97 if incorrect num of args
+ * 98 if file_from does not exist or unreadable
+ * 99 if write fails
+ * 100 if file close fails
+ * 0 otherwise
+ */
+int main(int ac, char *av[])
+{
+	char buf[1024];
+	int read_len, write_len, file_back, file_go, error;
+
+	if (ac != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		return (97);
+	}
+	file_back = open(av[1], O_RDONLY);
+	if (file_back == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		return (98);
+	}
+	file_go = open(av[2], O_WRONLY | O_CREAT | O_TRUNC,
+			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	if (file_go == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		close_andprint(file_back);
+		return (99);
+	}
+	do {
+		read_len = read(file_back, buf, 1024);
+		if (read_len == -1)
+			return (reading_oops(file_back, file_go, av[1]));
+		write_len = write(file_go, buf, read_len);
+		if (write_len == -1 || write_len != read_len)
+			return (writing_oops(file_back, file_go, av[2]));
+	} while (read_len == 1024);
+	error = error_close(file_back, file_go);
+	if (error != 0)
+		return (100);
+	return (0);
+}
