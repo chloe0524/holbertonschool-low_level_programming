@@ -1,7 +1,8 @@
 #ifndef HEADER_HASH_H
 #define HEADER_HASH_H
 
-
+#include <stdlib.h>
+#include <string.h>
 #include <stdlib.h>
 #include <stddef.h>
 
