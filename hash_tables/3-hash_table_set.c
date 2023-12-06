@@ -8,7 +8,6 @@
  *
  * Return: 1 on success, 0 on failure
  */
-
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -22,7 +21,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	before_node = ht->array[index];
 	while (before_node != NULL)
 	{
-
+		if (strcmp(before_node->key, key) == 0)
+		{
+			free(before_node->value);
+			before_node->value = strdup(value);
+			if (before_node->value == NULL)
+			return (0);
+			return (1);
+		}
 		before_node = before_node->next;
 	}
 
@@ -45,3 +51,4 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	return (1);
 }
+
