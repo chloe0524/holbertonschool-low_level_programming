@@ -1,5 +1,7 @@
 # Holberton School Simple Shell Project
 
+![6480d9b63a806a1b35fec007_Holberton](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/b53938c1-ac78-4645-9b19-dadb3de51a62)
+
 ## Description
 
 This is a custom implementation of a "simple shell" in C, created as part of the Holberton School curriculum. 
