@@ -1,6 +1,4 @@
-Certainly! I've updated the template as per your request:
 
-```markdown
 # C - Search Algorithms
 
 ## Table of Contents
