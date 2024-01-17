@@ -36,7 +36,8 @@ int binary_search(int *array, size_t size, int value)
  * print_array - Prints an array of integers
  *
  * @array: The array to be printed
- * @size: Number of elements in @array
+ * @i: first element
+ * @j: last element
  */
 void print_array(int *array, int i, int j)
 {
