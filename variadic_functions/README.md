@@ -17,7 +17,7 @@ Prototype: `int sum_them_all(const unsigned int n, ...);`
 
 If n == 0, return 0
 
-## To be is to be the value of a variable
+## To be is to be the value of a variable :card_index:
 
 Mandatory
 
