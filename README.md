@@ -2,7 +2,7 @@
 
 This repository contains various C :heart: projects completed while learning coding fundamentals during the first trimester at Holberton School.
 
-**Project List:**
+`## **Project List:**
 
 * **hello_world:** Basic "Hello, World!" program.
 * **argc_argv:** Working with command-line arguments.
