@@ -1,6 +1,6 @@
 ## holbertonschool-low_level_programming :star:
 
-This repository contains various C (:heart:) projects completed while learning coding fundamentals during the first trimester at Holberton School.
+This repository contains various C :heart: projects completed while learning coding fundamentals during the first trimester at Holberton School.
 
 **Project List:**
 
