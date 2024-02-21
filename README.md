@@ -1,3 +1,6 @@
+
+![github readme lo level](https://github.com/chloe0524/holbertonschool-low_level_programming/assets/127857895/27b70110-5843-47f3-a2d3-2664921a25e3)
+
 # **holbertonschool-low_level_programming :star:**
 
 This repository contains various C :heart: projects completed while learning coding fundamentals during the first trimester at Holberton School Toulouse. These projects served as practice exercises with the goal of learning essential coding concepts and applying them to practical problems.
