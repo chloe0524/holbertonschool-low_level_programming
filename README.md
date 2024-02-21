@@ -29,8 +29,8 @@ This repository contains various C :heart: projects completed while learning cod
 
 **Latest Commit:**
 
-* **chloe0524:** test vscode
-* (I can't believe this is my last commit, I'm ashamed :upside_down_face:)
+* **chloe0524:** ``test vscode``
+ (I can't believe this is my last commit, I'm ashamed :upside_down_face:)
 
 **Skills Learned/Acquired :thumbsup:**
 
