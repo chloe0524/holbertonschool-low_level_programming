@@ -6,18 +6,20 @@ This repository contains various C :heart: projects completed while learning cod
 
 
 | :arrow_up:               | :arrow_down:             |
-|---------------------------|---------------------------|
-| 1. ``hello_world``        | 2. ``argc_argv``         |
-| 3. ``header_file``        | 4. ``bit_manipulation``  |
-| 5. ``doubly_linked_lists``| 6. ``file_io``           |
-| 7. ``function_pointers``  | 8. ``functions_nested_loops``|
-| 9. ``hash_tables``        | 10. ``makefiles``        |
-| 11. ``malloc_free``       | 12. ``more_functions_nested_loops``|
-| 13. ``more_malloc_free``  | 14. ``pointers_arrays_strings``|
-| 15. ``preprocessor``      | 16. ``recursion``        |
-| 17. ``search_algorithms`` | 18. ``singly_linked_lists``|
-| 19. ``static_libraries``  | 20. ``structures_typedef``|
-| 21. ``variables_if_else_while``| 22. ``variadic_functions``|
+|-------------------------------|---------------------------------|
+| 1. ``hello_world``            | 2. ``argc_argv``                |
+| 3. ``bit_manipulation``       | 4. ``doubly_linked_lists``      |
+| 5. ``file_io``                | 6. ``function_pointers``        |
+| 7. ``functions_nested_loops`` | 8. ``hash_tables``              |
+| 9. ``makefiles``              | 10. ``malloc_free``             |
+| 11. ``
+
+more_functions_nested_loops``   | 12. ``more_malloc_free`` |
+| 13. ``pointers_arrays_strings`` | 14. ``preprocessor``      |
+| 15. ``recursion``               | 16. ``search_algorithms`` |
+| 17. ``singly_linked_lists``     | 18. ``static_libraries``  |
+| 19. ``structures_typedef``      | 20. ``variables_if_else_while`` |
+| 21. ``variadic_functions``      |                                |
 
 #### Latest Commit:
 
