@@ -1,6 +1,6 @@
 # **holbertonschool-low_level_programming :star:**
 
-This repository contains various C :heart: projects completed while learning coding fundamentals during the first trimester at Holberton School Toulouse.
+This repository contains various C :heart: projects completed while learning coding fundamentals during the first trimester at Holberton School Toulouse. These projects served as practice exercises with the goal of learning essential coding concepts and applying them to practical problems.
 
 #### Project List:
 
