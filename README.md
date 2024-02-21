@@ -12,9 +12,7 @@ This repository contains various C :heart: projects completed while learning cod
 | 5. ``file_io``                | 6. ``function_pointers``        |
 | 7. ``functions_nested_loops`` | 8. ``hash_tables``              |
 | 9. ``makefiles``              | 10. ``malloc_free``             |
-| 11. ``
-
-more_functions_nested_loops``   | 12. ``more_malloc_free`` |
+| 11.more_functions_nested_loops``   | 12. ``more_malloc_free`` |
 | 13. ``pointers_arrays_strings`` | 14. ``preprocessor``      |
 | 15. ``recursion``               | 16. ``search_algorithms`` |
 | 17. ``singly_linked_lists``     | 18. ``static_libraries``  |
