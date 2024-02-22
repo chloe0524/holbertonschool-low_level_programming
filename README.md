@@ -22,10 +22,6 @@ This repository contains various C :heart: projects completed while learning cod
 | 19. ``structures_typedef``      | 20. ``variables_if_else_while`` |
 | 21. ``variadic_functions``      |                                |
 
-#### Latest Commit:
-
-* **chloe0524:** ``test vscode``
-  (I can't believe this is my last commit, I'm ashamed :upside_down_face:)
 
 #### Skills Learned/Acquired :thumbsup:
 
