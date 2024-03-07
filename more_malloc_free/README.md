@@ -83,4 +83,3 @@ Got it, here's the revised table without the ".py" extension:
 | models/review                        | tests/test_models/test_review.py                         |
 | models/engine/file_storage           | tests/test_models/test_engine/test_file_storage.py       |
 
-```
