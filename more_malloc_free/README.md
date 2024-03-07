@@ -1,85 +1,39 @@
-![White Minimalist Elegant Handwritten LinkedIn Banner](https://github.com/chloe0524/chloe0524/assets/127857895/8c8b709d-9d88-4c69-95fe-577ade858d0b)
+Tasks
+0. Trust no one
+mandatory
+Write a function that allocates memory using malloc.
 
-# *``AirBnB clone - The console``*
+Prototype: void *malloc_checked(unsigned int b);
+Returns a pointer to the allocated memory
+if malloc fails, the malloc_checked function should cause normal process termination with a status value of 98
 
-## Description
+1. string_nconcat
+mandatory
+Write a function that concatenates two strings.
 
-This project is a clone of the AirBnB application. It includes a parent class (`BaseModel`) for managing common attributes/methods for other classes, and classes for user, state, city, amenity, place, and review.
+Prototype: char *string_nconcat(char *s1, char *s2, unsigned int n);
+The returned pointer shall point to a newly allocated space in memory, which contains s1, followed by the first n bytes of s2, and null terminated
+If the function fails, it should return NULL
+If n is greater or equal to the length of s2 then use the entire string s2
+if NULL is passed, treat it as an empty string
 
-## Command Interpreter
+2. _calloc
+mandatory
+Write a function that allocates memory for an array, using malloc.
 
-The command interpreter is designed to manage the objects of our project. It provides a command line interface.
+Prototype: void *_calloc(unsigned int nmemb, unsigned int size);
+The _calloc function allocates memory for an array of nmemb elements of size bytes each and returns a pointer to the allocated memory.
+The memory is set to zero
+If nmemb or size is 0, then _calloc returns NULL
+If malloc fails, then _calloc returns NULL
 
-## Requirements
+3. array_range
+mandatory
+Write a function that creates an array of integers.
 
-#### :small_red_triangle: ``Python Scripts``
-
-|                                      |                                                                       |
-|--------------------------------------|--------------------------------------------------------------------------|
-| **Editors**                          | vi, vim, emacs                                                           |
-| **Interpretation/Compilation**       | Ubuntu 20.04 LTS using Python 3.8.5                                      |
-| **README.md**                        | Mandatory at the root of the project folder                              |
-| **Code Style**                       | Should follow PEP8                           |
-
-#### :small_red_triangle: ``Python Unit Tests``
-
-|                                      |                                                                          |
-|--------------------------------------|--------------------------------------------------------------------------|
-| **Editors**                          | vi, vim, emacs                                                           |
-| **Testing Module**                   | Should use the `unittest` module                                         |
-| **Test Execution**                   | Run tests using `python3 -m unittest discover tests` or `python3 -m unittest <test_file>` |
-
-### The console :video_game:
-
-:small_red_triangle: You can start the command interpreter by running the `console.py` in your terminal:
-
-```bash
-./console.py
-```
-
-### How to use it
-
- :small_red_triangle: Once the program is running and the command interpreter has started, you can use commands like `create`, `show`, `destroy`, `all`, and `update` to manipulate data.
-
-### Examples
-
-- `create BaseModel`: Creates a new instance of `BaseModel`, saves it to the JSON file, and prints the `id`.
-
-```bash
-(hbnb) create BaseModel
-fa0636af-8e8a-4642-961c-5c83a23d8d0d
-(hbnb)
-```
-
-- `show BaseModel 1234-1234-1234`: Prints the string representation of an instance based on the class name and `id`.
-
-```bash
-(hbnb) show BaseModel 1234-1234-1234
-** no instance found **
-(hbnb)
-```
-
-- `destroy BaseModel 1234-1234-1234`: Deletes an instance based on the class name and `id`.
-
-```bash
-(hbnb) destroy 1234-1234-1234
-** class doesn't exist **
-(hbnb)
-```
-
-## Files
-
-:small_red_triangle: This project includes the following files:
-Got it, here's the revised table without the ".py" extension:
-
-| Source Codes                         | Test Files                                               |
-|--------------------------------------|----------------------------------------------------------|
-| models/base_model                    | tests/test_models/test_base_model.py                     |
-| models/user                          | tests/test_models/test_user.py                           |
-| models/state                         | tests/test_models/test_state.py                          |
-| models/city                          | tests/test_models/test_city.py                           |
-| models/amenity                       | tests/test_models/test_amenity.py                        |
-| models/place                         | tests/test_models/test_place.py                          |
-| models/review                        | tests/test_models/test_review.py                         |
-| models/engine/file_storage           | tests/test_models/test_engine/test_file_storage.py       |
+Prototype: int *array_range(int min, int max);
+The array created should contain all the values from min (included) to max (included), ordered from min to max
+Return: the pointer to the newly created array
+If min > max, return NULL
+If malloc fails, return NULL
 
